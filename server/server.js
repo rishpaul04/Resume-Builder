@@ -15,7 +15,7 @@ await connectDB()
 app.use(express.json())
 app.use(cors({
   origin: [
-    "https://954de38e.resume-builder-81b.pages.dev", // Your Cloudflare URL
+    "https://d007c656.resume-builder-81b.pages.dev", // Your Cloudflare URL
     "http://localhost:5173" // For local testing
   ],
   credentials: true
