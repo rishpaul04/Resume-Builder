@@ -13,7 +13,13 @@ const PORT = process.env.PORT || 3000;
 await connectDB()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: [
+    "https://954de38e.resume-builder-81b.pages.dev", // Your Cloudflare URL
+    "http://localhost:5173" // For local testing
+  ],
+  credentials: true
+}));
 
 app.get('/', (req, res)=> res.send("Server is live..."))
 app.use('/api/users', userRouter)
