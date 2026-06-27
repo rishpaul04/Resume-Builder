@@ -15,8 +15,9 @@ await connectDB()
 app.use(express.json())
 app.use(cors({
   origin: [
-    "https://d007c656.resume-builder-81b.pages.dev", // Your Cloudflare URL
-    "http://localhost:5173" // For local testing
+    "https://resumiify.netlify.app", // Your Cloudflare URL
+    "http://localhost:5173"// For local testing
+    
   ],
   credentials: true
 }));
